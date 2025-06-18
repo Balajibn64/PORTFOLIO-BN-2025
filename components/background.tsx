@@ -17,7 +17,7 @@ export function AnimatedBackground() {
         const dy = clientY - (rect.top + rect.height / 2);
         const distance = Math.sqrt(dx * dx + dy * dy);
         const intensity = Math.max(0, 1 - distance / 300);
-        star.style.transform = `translate(${dx * intensity * 0.05}px, ${dy * intensity * 0.05}px)`;
+        (star as HTMLElement).style.transform = `translate(${dx * intensity * 0.05}px, ${dy * intensity * 0.05}px)`;
       });
     };
 
